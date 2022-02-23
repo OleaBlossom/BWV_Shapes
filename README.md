@@ -1,2 +1,2 @@
-# BWV_Figuren
-figuren
+# BWV_Shapes
+based on the UML class diagram we worked on in class
