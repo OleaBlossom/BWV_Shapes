@@ -1,8 +1,8 @@
 package Shape;
 
 public abstract class ShapeTwoDimensional {
-    public abstract double area();
+    public abstract double calculateArea();
 
-    public abstract double perimeter();
+    public abstract double calculatePerimeter();
 
 }
