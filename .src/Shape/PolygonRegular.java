@@ -29,11 +29,18 @@ public class PolygonRegular
     }
 
     public void setNumberOfSides(int n) {
-        this.numberOfSides = n;
+        this.numberOfSides = Math.abs(n);
     }
 
     public void setSideLength(double length) {
-        this.sideLength = length;
+        this.sideLength = Math.abs(length);
     }
 
+    public double getSideLength() {
+        return sideLength;
+    }
+
+    public int getNumberOfSides() {
+        return numberOfSides;
+    }
 }
