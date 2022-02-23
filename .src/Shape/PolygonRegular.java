@@ -12,11 +12,20 @@ public class PolygonRegular
     }
 
     public double calculateArea() {
-        return 0; // todo: first implement incircle and excirle
+        Triangle triangle = new Triangle(sideLength, calculateExcircleRadius(), calculateExcircleRadius());
+        return numberOfSides * triangle.calculateArea();
     }
 
     public double calculatePerimeter() {
         return numberOfSides * sideLength;
+    }
+
+    public double calculateIncircleRadius() {
+        return sideLength / (2 * Math.tan(Math.PI / numberOfSides));
+    }
+
+    public double calculateExcircleRadius() {
+        return sideLength / (2 * Math.sin(Math.PI / numberOfSides));
     }
 
     public void setNumberOfSides(int n) {
