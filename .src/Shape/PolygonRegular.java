@@ -11,7 +11,7 @@ public class PolygonRegular
         this.setSideLength(sideLength);
     }
 
-    public double calculateArea() {
+    public double calculateArea() throws IllegalArgumentException {
         Triangle triangle = new Triangle(sideLength, calculateExcircleRadius(), calculateExcircleRadius());
         return numberOfSides * triangle.calculateArea();
     }

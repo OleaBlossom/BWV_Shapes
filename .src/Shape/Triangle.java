@@ -1,15 +1,27 @@
 package Shape;
 
 public class Triangle
-extends ShapeTwoDimensional {
+        extends ShapeTwoDimensional {
     private double sideA;
     private double sideB;
     private double sideC;
 
-    public Triangle(double a, double b, double c) {
-        setSideA(a);
-        setSideB(b);
-        setSideC(c);
+    public Triangle(double a, double b, double c) throws IllegalArgumentException {
+        boolean isValid = validate(a, b, c);
+
+        if (isValid) {
+            setSideA(a);
+            setSideB(b);
+            setSideC(c);
+        } else {
+            throw new IllegalArgumentException("the sum of the lengths of any two sides of a triangle has to be greater than the length of the third side");
+        }
+    }
+
+    private static boolean validate(double a, double b, double c) {
+        return (a + b) > c
+                && (b + c) > a
+                && (c + a) > b;
     }
 
     public double calculateArea() {
