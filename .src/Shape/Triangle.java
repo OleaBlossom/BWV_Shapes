@@ -7,6 +7,10 @@ public class Triangle
     private double sideC;
 
     public Triangle(double a, double b, double c) throws IllegalArgumentException {
+        a = Math.abs(a);
+        b = Math.abs(b);
+        c = Math.abs(c);
+
         boolean isValid = validate(a, b, c);
 
         if (isValid) {
@@ -38,14 +42,14 @@ public class Triangle
     }
 
     public void setSideA(double sideA) {
-        this.sideA = Math.abs(sideA);
+        this.sideA = sideA;
     }
 
     public void setSideB(double sideB) {
-        this.sideB = Math.abs(sideB);
+        this.sideB = sideB;
     }
 
     public void setSideC(double sideC) {
-        this.sideC = Math.abs(sideC);
+        this.sideC = sideC;
     }
 }
