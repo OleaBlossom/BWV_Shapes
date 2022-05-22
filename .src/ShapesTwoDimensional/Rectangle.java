@@ -1,6 +1,6 @@
-package Shape;
+package ShapesTwoDimensional;
 
-public class Rectangle extends ShapeTwoDimensional {
+public class Rectangle implements ShapeTwoDimensional {
 
     private double width;
     private double breadth;

@@ -1,6 +1,8 @@
-package Shape;
+package ShapesTwoDimensional;
 
-public class Circle extends ShapeTwoDimensional {
+import static java.lang.Math.PI;
+
+public class Circle implements ShapeTwoDimensional {
 
     private double radius;
 
@@ -9,11 +11,11 @@ public class Circle extends ShapeTwoDimensional {
     }
 
     public double calculateArea() {
-        return Math.PI * Math.pow(this.radius, 2);
+        return PI * Math.pow(radius, 2);
     }
 
     public double calculatePerimeter() {
-        return 2 * Math.PI * radius;
+        return 2 * PI * radius;
     }
 
     public void setRadius(double radius) {
