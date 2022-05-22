@@ -1,8 +1,8 @@
 package ShapesTwoDimensional;
 
-public interface ShapeTwoDimensional {
-    double calculateArea() throws IllegalArgumentException;
+public abstract class ShapeTwoDimensional {
+    abstract double calculateArea() throws IllegalArgumentException;
 
-    double calculatePerimeter();
+    abstract double calculatePerimeter();
 
 }

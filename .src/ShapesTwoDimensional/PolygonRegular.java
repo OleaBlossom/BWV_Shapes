@@ -1,7 +1,6 @@
 package ShapesTwoDimensional;
 
-public class PolygonRegular
-        implements ShapeTwoDimensional {
+public class PolygonRegular extends ShapeTwoDimensional {
 
     private int numberOfSides;
     private double sideLength;

@@ -1,7 +1,6 @@
 package ShapesTwoDimensional;
 
-public class Triangle
-        implements ShapeTwoDimensional {
+public class Triangle extends ShapeTwoDimensional {
     private double sideA;
     private double sideB;
     private double sideC;

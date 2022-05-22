@@ -2,7 +2,7 @@ package ShapesTwoDimensional;
 
 import static java.lang.Math.PI;
 
-public class Circle implements ShapeTwoDimensional {
+public class Circle extends ShapeTwoDimensional {
 
     private double radius;
 
