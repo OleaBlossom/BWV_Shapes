@@ -1,7 +1,6 @@
 package ShapesThreeDimensional;
 
 import ShapesTwoDimensional.*;
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError;
 
 public abstract class Pyramid<T extends ShapeTwoDimensional> extends RightPrism<T> {
 
@@ -9,7 +8,7 @@ public abstract class Pyramid<T extends ShapeTwoDimensional> extends RightPrism<
         super(base, height);
     }
 
-    public abstract double calculateLateralSurfaceArea() throws TypeCheckError;
+    public abstract double calculateLateralSurfaceArea();
 
     @Override
     public void setBase(T base) {

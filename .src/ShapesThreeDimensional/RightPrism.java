@@ -1,7 +1,6 @@
 package ShapesThreeDimensional;
 
 import ShapesTwoDimensional.*;
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError;
 
 public class RightPrism<T extends ShapeTwoDimensional> implements ShapeThreeDimensional {
     private T base;
@@ -20,7 +19,7 @@ public class RightPrism<T extends ShapeTwoDimensional> implements ShapeThreeDime
         this.height = height;
     }
 
-    public ShapeTwoDimensional getBase() throws TypeCheckError {
+    public T getBase() {
         return base;
     }
 
@@ -30,12 +29,12 @@ public class RightPrism<T extends ShapeTwoDimensional> implements ShapeThreeDime
 
 
     @Override
-    public double calculateSurfaceArea() throws TypeCheckError {
+    public double calculateSurfaceArea() {
         return 0;
     }
 
     @Override
-    public double calculateVolume() throws TypeCheckError {
+    public double calculateVolume() {
         return 0;
     }
 }

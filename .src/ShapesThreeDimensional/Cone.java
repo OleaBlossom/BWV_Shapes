@@ -1,7 +1,6 @@
 package ShapesThreeDimensional;
 
 import ShapesTwoDimensional.*;
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.TypeCheckError;
 
 public class Cone extends Pyramid<Circle> {
 
@@ -10,35 +9,21 @@ public class Cone extends Pyramid<Circle> {
     }
 
     @Override
-    public double calculateLateralSurfaceArea() throws TypeCheckError {
+    public double calculateLateralSurfaceArea() {
         // π x r x √(r² + h²)
-        double radius = getBase().getRadius();
+        Circle base = getBase();
+        double radius = base.getRadius();
         return Math.PI * radius * Math.sqrt(Math.pow(radius, 2) + Math.pow(getHeight(), 2));
     }
 
     @Override
-    public double calculateSurfaceArea() throws TypeCheckError {
+    public double calculateSurfaceArea() {
         return getBase().calculateArea() + calculateLateralSurfaceArea();
     }
 
     @Override
-    public double calculateVolume() throws TypeCheckError {
+    public double calculateVolume() {
         // (πr2h)/3
         return (Math.PI * Math.pow(getBase().getRadius(), 2) * getHeight()) / 3;
-    }
-
-    @Override
-    public Circle getBase() throws TypeCheckError {
-        ShapeTwoDimensional b = super.getBase();
-        if (b instanceof Circle) {
-            return (Circle) b;
-        } else {
-            throw new TypeCheckError("oops, that's not a circle", b);
-        }
-    }
-
-    @Override
-    public void setBase(Circle base) {
-        super.setBase(base);
     }
 }
