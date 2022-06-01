@@ -1,8 +1,8 @@
 package ShapesThreeDimensional;
 
-public interface ShapeThreeDimensional {
-    double calculateSurfaceArea();
+public abstract class ShapeThreeDimensional {
+    abstract double calculateSurfaceArea();
 
-    double calculateVolume();
+    abstract double calculateVolume();
 
 }
