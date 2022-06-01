@@ -17,11 +17,6 @@ public class Cone extends Pyramid<Circle> {
     }
 
     @Override
-    public double calculateSurfaceArea() {
-        return getBase().calculateArea() + calculateLateralSurfaceArea();
-    }
-
-    @Override
     public double calculateVolume() {
         // (πr2h)/3
         return (Math.PI * Math.pow(getBase().getRadius(), 2) * getHeight()) / 3;
