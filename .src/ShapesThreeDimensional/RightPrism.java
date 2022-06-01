@@ -11,11 +11,14 @@ public class RightPrism<T extends ShapeTwoDimensional> extends WithTwoDimensiona
 
     @Override
     public double calculateSurfaceArea() {
-        return 0;
+        // 2 × (BA) + P × H
+        T base = getBase();
+        return 2 * base.calculateArea() + base.calculatePerimeter() * getHeight();
     }
 
     @Override
     public double calculateVolume() {
-        return 0;
+        // BA × H
+        return getBase().calculateArea() * getHeight();
     }
 }
