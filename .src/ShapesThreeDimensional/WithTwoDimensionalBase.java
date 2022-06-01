@@ -2,7 +2,7 @@ package ShapesThreeDimensional;
 
 import ShapesTwoDimensional.ShapeTwoDimensional;
 
-public class WithTwoDimensionalBase<T extends ShapeTwoDimensional> extends ShapeThreeDimensional {
+public abstract class WithTwoDimensionalBase<T extends ShapeTwoDimensional> extends ShapeThreeDimensional {
 
     private T base;
     private double height;
@@ -10,16 +10,6 @@ public class WithTwoDimensionalBase<T extends ShapeTwoDimensional> extends Shape
     public WithTwoDimensionalBase(T base, double height) {
         setBase(base);
         setHeight(height);
-    }
-
-    @Override
-    double calculateSurfaceArea() {
-        return 0;
-    }
-
-    @Override
-    double calculateVolume() {
-        return 0;
     }
 
     public double getHeight() {
